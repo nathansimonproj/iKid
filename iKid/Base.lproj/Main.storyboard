@@ -11,18 +11,51 @@
         <!--Good-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="JokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IN3-xE-VFV">
+                                <rect key="frame" x="20" y="138" width="353" height="577"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why don't Skeletons fight each other?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oON-cx-3pO">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="288.66666666666669"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <color key="textColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3d-eR-pSl">
+                                        <rect key="frame" x="0.0" y="288.66666666666674" width="353" height="288.33333333333326"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Flip">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="flipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2aC-P4-gen"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="IN3-xE-VFV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EpR-oW-x66"/>
+                            <constraint firstAttribute="trailing" secondItem="IN3-xE-VFV" secondAttribute="trailing" constant="20" id="jwL-S2-NpJ"/>
+                            <constraint firstItem="IN3-xE-VFV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="kP9-6i-qeE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IN3-xE-VFV" secondAttribute="bottom" constant="20" id="lkv-J3-7wS"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Good" image="hand.thumbsup" catalog="system" selectedImage="hand.thumbsup.circle.fill" id="mLj-6s-54G"/>
+                    <connections>
+                        <outlet property="flipButton" destination="o3d-eR-pSl" id="waY-Wf-99a"/>
+                        <outlet property="labelText" destination="oON-cx-3pO" id="P0p-hg-YSr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1266" y="875"/>
+            <point key="canvasLocation" x="-1031.2977099236641" y="1032.3943661971832"/>
         </scene>
         <!--Pun-->
         <scene sceneID="ugQ-G7-Os9">
@@ -31,14 +64,43 @@
                     <view key="view" contentMode="scaleToFill" id="f3v-z8-Rrm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Gtr-YA-bgd">
+                                <rect key="frame" x="20" y="138" width="353" height="577"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why don't Skeletons fight each other?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22K-oF-VUj">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="288.66666666666669"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <color key="textColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uge-Hp-gkY">
+                                        <rect key="frame" x="0.0" y="288.66666666666674" width="353" height="288.33333333333326"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Flip">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="flipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9zd-aT-7u6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sXF-EA-Jxo"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Gtr-YA-bgd" secondAttribute="trailing" constant="20" id="3u3-ug-slH"/>
+                            <constraint firstItem="Gtr-YA-bgd" firstAttribute="leading" secondItem="f3v-z8-Rrm" secondAttribute="leading" constant="20" id="jTu-dC-XyR"/>
+                            <constraint firstItem="Gtr-YA-bgd" firstAttribute="top" secondItem="sXF-EA-Jxo" secondAttribute="top" constant="20" id="oz4-iW-m0b"/>
+                            <constraint firstItem="sXF-EA-Jxo" firstAttribute="bottom" secondItem="Gtr-YA-bgd" secondAttribute="bottom" constant="20" id="uRw-6d-tOy"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pun" image="trash" catalog="system" selectedImage="trash.fill" id="R3D-hN-Mkm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibF-jA-bNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="875"/>
+            <point key="canvasLocation" x="135" y="1290"/>
         </scene>
         <!--Dad-->
         <scene sceneID="X57-vy-XFr">
@@ -47,14 +109,43 @@
                     <view key="view" contentMode="scaleToFill" id="aZ4-86-A2J">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GcP-Rz-kTR">
+                                <rect key="frame" x="20" y="138" width="353" height="577"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why don't Skeletons fight each other?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMi-ey-S8Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="288.66666666666669"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <color key="textColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiC-7i-dnj">
+                                        <rect key="frame" x="0.0" y="288.66666666666674" width="353" height="288.33333333333326"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Flip">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="flipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Or1-Fj-M9O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hdu-eh-Lr7"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" red="0.51855532410000005" green="0.29909430930000003" blue="0.74433157599999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="GcP-Rz-kTR" firstAttribute="top" secondItem="hdu-eh-Lr7" secondAttribute="top" constant="20" id="OMx-Uu-mXU"/>
+                            <constraint firstItem="GcP-Rz-kTR" firstAttribute="leading" secondItem="hdu-eh-Lr7" secondAttribute="leading" constant="20" id="UTP-eE-0WC"/>
+                            <constraint firstAttribute="trailing" secondItem="GcP-Rz-kTR" secondAttribute="trailing" constant="20" id="fdy-NJ-L5i"/>
+                            <constraint firstItem="hdu-eh-Lr7" firstAttribute="bottom" secondItem="GcP-Rz-kTR" secondAttribute="bottom" constant="20" id="oeP-Mg-R7V"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dad" image="figure.stand" catalog="system" selectedImage="figure.stand" id="AUK-V8-3qx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ac4-nD-tb7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="875"/>
+            <point key="canvasLocation" x="1320" y="1032"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IWf-xn-fte">
@@ -62,9 +153,11 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="sEx-xC-6wQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eVd-sy-SRP">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
                     <connections>
+                        <segue destination="nKu-6M-zUB" kind="relationship" relationship="viewControllers" id="3de-6e-EKs"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="IHV-er-WIc"/>
                         <segue destination="0XW-g3-wrz" kind="relationship" relationship="viewControllers" id="p8g-gh-Ekf"/>
                         <segue destination="XDm-LZ-s5i" kind="relationship" relationship="viewControllers" id="4Xm-lf-MsN"/>
@@ -74,21 +167,53 @@
             </objects>
             <point key="canvasLocation" x="136.64122137404578" y="137.32394366197184"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="upt-KP-8u3">
+            <objects>
+                <viewController id="nKu-6M-zUB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oND-yY-Cst">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to iKid!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NB1-BR-RTi">
+                                <rect key="frame" x="20" y="138" width="353" height="577"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="textColor" red="0.51855532410000005" green="0.29909430930000003" blue="0.74433157599999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h2M-dd-rGm"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="h2M-dd-rGm" firstAttribute="trailing" secondItem="NB1-BR-RTi" secondAttribute="trailing" constant="20" id="LfR-TG-qTZ"/>
+                            <constraint firstItem="h2M-dd-rGm" firstAttribute="bottom" secondItem="NB1-BR-RTi" secondAttribute="bottom" constant="20" id="RsJ-FP-yyw"/>
+                            <constraint firstItem="NB1-BR-RTi" firstAttribute="top" secondItem="h2M-dd-rGm" secondAttribute="top" constant="20" id="dQM-yw-zbn"/>
+                            <constraint firstItem="NB1-BR-RTi" firstAttribute="leading" secondItem="h2M-dd-rGm" secondAttribute="leading" constant="20" id="iZi-7X-Dnq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="bXR-ck-JdS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="59W-zU-bfj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2076" y="877"/>
+        </scene>
     </scenes>
     <resources>
         <image name="figure.stand" catalog="system" width="74" height="128"/>
         <image name="hand.thumbsup" catalog="system" width="123" height="128"/>
         <image name="hand.thumbsup.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="trash" catalog="system" width="117" height="128"/>
         <image name="trash.fill" catalog="system" width="117" height="128"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.67450980392156867" green="0.49803921568627452" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.2196078431372549" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.0" green="0.76470588235294112" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
