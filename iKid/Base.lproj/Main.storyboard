@@ -48,6 +48,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Good" image="hand.thumbsup" catalog="system" selectedImage="hand.thumbsup.circle.fill" id="mLj-6s-54G"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="joke" value="Why don't Skeletons fight each other?"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="answer" value="Because they don't have the guts!"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="flipButton" destination="o3d-eR-pSl" id="waY-Wf-99a"/>
                         <outlet property="labelText" destination="oON-cx-3pO" id="P0p-hg-YSr"/>
@@ -60,7 +64,7 @@
         <!--Pun-->
         <scene sceneID="ugQ-G7-Os9">
             <objects>
-                <viewController id="0XW-g3-wrz" sceneMemberID="viewController">
+                <viewController id="0XW-g3-wrz" customClass="JokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f3v-z8-Rrm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,6 +86,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="flipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9zd-aT-7u6"/>
+                                            <action selector="flipButtonTapped:" destination="0XW-g3-wrz" eventType="touchUpInside" id="YeJ-Jq-aeA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -97,6 +102,14 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pun" image="trash" catalog="system" selectedImage="trash.fill" id="R3D-hN-Mkm"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="joke" value="What do you call an alligator in a vest?"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="answer" value="An investigator."/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="flipButton" destination="uge-Hp-gkY" id="dhe-xK-bVu"/>
+                        <outlet property="labelText" destination="22K-oF-VUj" id="6el-ia-Bp5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibF-jA-bNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,7 +118,7 @@
         <!--Dad-->
         <scene sceneID="X57-vy-XFr">
             <objects>
-                <viewController id="XDm-LZ-s5i" sceneMemberID="viewController">
+                <viewController id="XDm-LZ-s5i" customClass="JokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aZ4-86-A2J">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,6 +140,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="flipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Or1-Fj-M9O"/>
+                                            <action selector="flipButtonTapped:" destination="XDm-LZ-s5i" eventType="touchUpInside" id="PV0-57-G2n"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -142,6 +156,14 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dad" image="figure.stand" catalog="system" selectedImage="figure.stand" id="AUK-V8-3qx"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="joke" value="When does a joke become a dad joke?"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="answer" value="When it becomes apparent."/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="flipButton" destination="wiC-7i-dnj" id="fNX-dw-0gI"/>
+                        <outlet property="labelText" destination="xMi-ey-S8Z" id="A3z-CN-YCZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ac4-nD-tb7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

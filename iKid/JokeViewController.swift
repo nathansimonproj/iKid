@@ -13,8 +13,8 @@ class JokeViewController : UIViewController {
     @IBOutlet weak var labelText: UILabel!
     @IBOutlet weak var flipButton: UIButton!
     
-    var joke = ""
-    var answer = ""
+    @IBInspectable var joke = ""
+    @IBInspectable var answer = ""
     var onJoke = false
     
     override func viewDidLoad() {
